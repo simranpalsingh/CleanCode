@@ -1,0 +1,30 @@
+class Main {
+  String testString;
+  public Main(String s){
+  	testString = s;
+  }
+  public boolean isPalindrome(String str){
+	
+	char[] charArray = str.toCharArray();
+	
+	int j = charArray.length - 1;
+	int i = 0;
+	
+	while(i < j){
+		if(charArray[i] != charArray[j]) return false;
+		else {
+			i++;
+			j--;
+		}
+	} //while
+	
+	return true;
+  }
+  
+  public static void main(String[] args) {
+    String test = "a";
+    Main obj = new Main(test);
+    System.out.println("is '"+ test+ "' , Palindrome ? \n Answer: "+ obj.isPalindrome(test));
+    
+  }//main()
+}//class
